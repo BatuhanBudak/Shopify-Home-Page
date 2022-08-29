@@ -2,25 +2,316 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100vh;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+html:focus-within {
+  scroll-behavior: smooth;
 }
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  transition: var(--transition-theme-modes);
+}
+
+:root {
+  /* colors */
+  --clr-black: 24 11% 9%;
+  --clr-grey: 20 3% 35%;
+  --clr-white: 0 0% 100%;
+  --clr-light: 30 50% 98%;
+  --clr-blue: 194 98% 32%;
+  --clr-brown: 36 99% 33%;
+  --clr-purple: 255 61% 42%;
+  --clr-lbrown: 24 33% 94%;
+  --clr-text-default: 210 3% 37%;
+  --clr-sidebar-background: 240 6% 97%;
+  --clr-link-default: 221 34% 42%;
+  --clr-link-hover: 220, 36%, 25%;
+  --clr-link-highlight: 230, 43%, 97%;
+  --clr-link-active: 220, 33%, 49%;
+  --clr-link-visited: 221, 34%, 42;
+  --clr-background-default: hsl(var(--clr-white));
+  --clr-icon-default: 109 113 117;
+
+  /* font-families */
+
+  --font-sans-fontfamily: "Inter", -apple-system, BlinkMacSystemFont,
+    "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  /* font-sizes */
+  --fs-xl: 3rem;
+  --fs-l: 2rem;
+  --fs-m: 1.75rem;
+  --fs-s: 1.45rem;
+  --fs-xs: 1.15rem;
+  --fs-xxs: 1rem;
+  --fs-xxs: 0.83rem;
+  --fs-tiny: 0.77rem;
+
+  /* spacing */
+  --maxwidth: 70.22rem;
+  --h-spacing: 1.1em;
+  --v-spacing: 1em;
+  --container-spacing-v: 1.1em;
+  --container-spacing-h: 1.1em;
+  --container-spacing-v-l: 1.3em;
+  --container-spacing-h-l: 1.3em;
+  --spacing-xxl: 6.67em;
+  --spacing-xl: 3.56em;
+  --spacing-l: 2.44em;
+  --spacing-m: 1.77em;
+  --spacing-s: 1.33em;
+  --spacing-s-2: 1.11em;
+  --spacing-xs: 0.88em;
+  --spacing-xxs: 0.66em;
+  --spacing-tiny: 0.44em;
+
+  /* Animations */
+  --transition-background-color: background-color 200ms linear;
+  --transition-border-color: border-color 200ms linear;
+  --transition-theme-modes: background-color 200ms linear,
+    border-color 200ms linear;
+}
+
+@media (min-width: 26.3125em) {
+  :root {
+    --fs-xl: 3.1rem;
+    --fs-l: 2.1rem;
+    --fs-m: 1.85rem;
+    --fs-s: 1.55rem;
+    --fs-xs: 1.25rem;
+    --fs-xxs: 1.1rem;
+  }
+}
+
+@media (min-width: 48.0625em) {
+  :root {
+    --h-spacing: 2.22em;
+    --v-spacing: 6em;
+    --container-spacing-v: 1.77em;
+    --container-spacing-h: 1.77em;
+    --container-spacing-v-l: 2.44em;
+    --container-spacing-h-l: 2.44em;
+
+    --fs-xl: 3.2rem;
+    --fs-l: 2.2rem;
+    --fs-m: 1.95rem;
+    --fs-s: 1.65rem;
+    --fs-xs: 1.35rem;
+    --fs-xxs: 1.2rem;
+    --fs-tiny: 0.87rem;
+  }
+}
+@media (min-width: 64.0625em) {
+  :root {
+    --h-spacing: 4.88rem;
+    --container-spacing-v: 2.22rem;
+    --container-spacing-h: 2.22rem;
+    --container-spacing-v-l: 3.55rem;
+    --container-spacing-h-l: 3.55rem;
+
+    --fs-xl: 3.3rem;
+    --fs-l: 2.3rem;
+    --fs-m: 2.05rem;
+    --fs-s: 1.75rem;
+    --fs-xs: 1.45rem;
+    --fs-xxs: 1.3rem;
+    --fs-tiny: 0.97rem;
+  }
+}
+
+@media (min-width: 80em) {
+  :root {
+    --fs-xl: 3.4rem;
+    --fs-l: 2.4rem;
+    --fs-m: 2.15rem;
+    --fs-s: 1.85rem;
+    --fs-xs: 1.55rem;
+    --fs-xxs: 1.4rem;
+    --fs-tiny: 1.07rem;
+    --fs-card-title: 1.22rem;
+    --fs-menu: 1rem;
+  }
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
-    color: white;
-    background: black;
+    color: hsl(var(--clr-white));
+    background: hsl(var(--clr-black));
   }
+}
+
+body {
+  font-family: var(--font-sans-fontfamily);
+  line-height: 1.5;
+  color: hsl(var(--clr-text-default));
+  background-color: hsl(var(--clr-white));
+  overflow-x: hidden;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: hsl(var(--clr-link));
+}
+a:hover,
+a:focus {
+  color: hsl(var(--clr-link-hover));
+}
+a:visited {
+  color: hsl(var(--clr-link-visited));
+}
+a::selection {
+  color: hsl(var(--clr-link-highlight));
+}
+a:active {
+  color: hsl(var(--clr-link-active));
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+button {
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85em 1em;
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-purple));
+  opacity: 1;
+  border: none;
+  border-color: transparent;
+  border-radius: 2.6rem;
+  outline: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0.11 0.22 rgba(0, 0, 0, 0.15);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  width: 0.8em;
+  height: 1em;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--maxwidth);
+  padding: 0 var(--h-spacing);
+}
+section {
+  margin: var(--v-spacing) 0;
+  padding: 0;
+  background-color: inherit;
+}
+
+main {
+  padding-top: 6rem;
 }
