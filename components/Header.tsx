@@ -1,31 +1,41 @@
-import Image from "next/image";
-import Nav from "./Nav";
-import podiaLogo from "../public/icons/podia-logo.svg";
 import useScreenSize from "../hooks/useScreenSize";
 import { useState } from "react";
 import { Hamburger, ChevronDown, Magnify, Dark, Sun, Close } from "./Icons";
+import useTransition from "../hooks/useTransition";
+import useToggle from "../hooks/useToggle";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
+  const [secondAccordionOpen, toggleSecondAccordion] = useToggle();
+  const [searchFormVisible, toggleSearchForm] = useToggle();
   const windowWidth = useScreenSize();
+  const [isTransitioning, toggleTransition] = useTransition();
   const breakPoint = 1000;
 
-  function toggleNav() {
-    setNavOpen((prev) => !prev);
+  function openNav() {
+    setNavOpen(true);
+    toggleTransition();
   }
 
   function closeNav() {
     setNavOpen(false);
+    toggleTransition();
   }
 
   return (
-    <header id="SiteNavContainer" className="site-nav-container sticky">
+    <header
+      id="SiteNavContainer"
+      className={`site-nav-container sticky ${navOpen ? "drawer-open" : ""}`}
+    >
       <div className="marketing-nav-wrapper">
         <a className="visuallyhidden" href="#Main">
           Skip to Content
         </a>
         <nav
-          className="marketing-nav marketing-nav--primary marketing-nav--skin-light"
+          className={`marketing-nav
+          marketing-nav--primary
+          marketing-nav--skin-light
+          ${searchFormVisible ? "show-form" : ""}`}
           id="ShopifyMainNav"
           aria-label="Main Menu"
         >
@@ -36,7 +46,7 @@ export default function Header() {
               className="marketing-nav__hamburger"
               aria-haspopup="dialog"
               aria-expanded={navOpen}
-              onClick={toggleNav}
+              onClick={openNav}
             >
               <Hamburger />
             </button>
@@ -192,13 +202,18 @@ export default function Header() {
               </li>
             </ul>
             <div className="search-container" id="searchContainer">
-              <form className="search-form" acceptCharset="UTF-8">
-                <label className="marketing-input-wrapper search-input-wrapper">
+              <form
+                className="search-form"
+                acceptCharset="UTF-8"
+                aria-hidden={!searchFormVisible}
+                id="SearchForm"
+              >
+                <label className="search-input-wrapper">
                   <span className="marketing-label marketing-label--hidden visuallyhidden">
                     Search the documentation
                   </span>
                   <input
-                    className="marketing-input search-input"
+                    className="search-input"
                     id="searchInput"
                     type="search"
                     name="query"
@@ -220,19 +235,23 @@ export default function Header() {
                   />
                 </button>
               </form>
-              <button
-                type="button"
-                className="search-mobile-button"
-                id="searchMobileButton"
-              >
-                <Magnify
-                  classname="icon search-mobile-button__icon"
-                  hidden="true"
-                  focus="false"
-                  id="icon-search-magnify"
-                  title="Search"
-                />
-              </button>
+              {!searchFormVisible && (
+                <button
+                  type="button"
+                  className="search-mobile-button"
+                  id="searchMobileButton"
+                  onClick={toggleSearchForm}
+                  aria-controls="SearchForm"
+                >
+                  <Magnify
+                    classname="icon search-mobile-button__icon"
+                    hidden="true"
+                    focus="false"
+                    id="icon-search-magnify"
+                    title="Search"
+                  />
+                </button>
+              )}
             </div>
             <ul className="marketing-nav__items marketing-nav__user display--expanded-nav">
               <li className="theme-mode-toggle-container">
@@ -268,10 +287,13 @@ export default function Header() {
       </div>
 
       <div
+        className={`drawer drawer--left ${
+          isTransitioning ? `is-transitioning` : ``
+        }`}
         id="NavDrawer"
-        className="drawer drawer--left"
         role="dialog"
         aria-modal={true}
+        tabIndex={navOpen ? -1 : 0}
         aria-labelledby="DrawerTitle"
       >
         <div className="drawer__inner-wrapper">
@@ -281,6 +303,7 @@ export default function Header() {
                 name="button"
                 type="button"
                 className="drawer__close-button js-drawer-close"
+                onClick={closeNav}
               >
                 <Close />
               </button>
@@ -296,13 +319,18 @@ export default function Header() {
           <div className="drawer__inner-bottom">
             <nav id="DrawerTitle" aria-label="Main Navigation">
               <div className="drawer-navigation">
-                <div className="accordion-item drawer-navigation__item">
+                <div
+                  className={`accordion-item drawer-navigation__item ${
+                    secondAccordionOpen ? "open" : ""
+                  }`}
+                >
                   <button
                     className="accordion-link drawer-navigation__link"
                     id="AccordionItem2"
                     tabIndex={0}
                     aria-controls="AccordionItem3"
-                    aria-expanded="false"
+                    aria-expanded={secondAccordionOpen}
+                    onClick={toggleSecondAccordion}
                   >
                     <span className="drawer-navigation__link-content">
                       Menu
@@ -322,11 +350,12 @@ export default function Header() {
                     </svg>
                   </button>
                   <div
-                    className="accordion-content drawer-navigation__content"
+                    className={`accordion-content drawer-navigation__content 
+                    }`}
                     id="AccordionItem3"
                     role="region"
                     aria-labelledby="AccordionItem2"
-                    aria-hidden={true}
+                    aria-hidden={!secondAccordionOpen}
                   >
                     <ul>
                       <li className="drawer-navigation__list">

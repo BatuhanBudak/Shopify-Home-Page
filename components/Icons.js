@@ -82,7 +82,7 @@ export const Sun = () => (
     viewBox="0 0 24 24"
   >
     <path
-      fill="currentColor"
+      fill="#EBAF26"
       d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13"
     />
   </svg>
@@ -91,15 +91,16 @@ export const Sun = () => (
 export const Close = () => (
   <svg
     className="icon"
-    width="24px"
-    height="24px"
     aria-labelledby="cancel"
     viewBox="0 0 24 24"
+    role="img"
+    focusable="true"
   >
     <title id="cancel">Close Main Navigation</title>
+
     <path
       fill="currentColor"
-      d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+      d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
     />
   </svg>
 );
