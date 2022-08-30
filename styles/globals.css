@@ -36,11 +36,20 @@ html:focus-within {
   --clr-background-darker: hsl(240, 6%, 97%);
   --clr-divider-default: 210 7% 84%;
   --clr-icon-default: 109 113 117;
+  --clr--fill-icon-default: 210 4% 44%;
 
   /* font-families */
 
   --font-sans-fontfamily: "Inter", -apple-system, BlinkMacSystemFont,
     "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  --font-sans-font-nav-minor-category-base: 400 0.75rem/1rem "Inter",
+    -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+
+  --font-sans-font-nav-item-base: 400 0.875rem/1.25rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
 
   /* font-sizes */
   --fs-xl: 3rem;
@@ -54,6 +63,7 @@ html:focus-within {
 
   /* spacing */
   --maxwidth: 70.22rem;
+  --maincontent-max-width: 1268px;
   --h-spacing: 1.1em;
   --v-spacing: 1em;
   --container-spacing-v: 1.1em;
@@ -77,6 +87,7 @@ html:focus-within {
     border-color 200ms linear;
 
   --icon-size-default: 1.25rem;
+  --icon-size-lg: 1.5rem;
   --menu-is-open-vh: 8.96px;
 }
 
