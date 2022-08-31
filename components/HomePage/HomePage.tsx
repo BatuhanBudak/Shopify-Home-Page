@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "./Banner";
 import Hero from "./Hero";
 
 export default function HomePage() {
@@ -6,6 +7,7 @@ export default function HomePage() {
     <main>
       <div className="homepage">
         <Hero />
+        <Banner />
       </div>
     </main>
   );

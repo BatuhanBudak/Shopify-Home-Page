@@ -50,6 +50,24 @@ html:focus-within {
   --font-sans-font-nav-item-base: 400 0.875rem/1.25rem "Inter", -apple-system,
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
+  --font-sans-font-display1-mobile: 800 2rem/2.25rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-excerpt-base: 400 1.125rem/1.75rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-headline3-mobile: 600 1.125rem/1.25rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-headline1-mobile: 600 1.5rem/1.75rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-body-minor-base: 400 0.875rem/1.25rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-headline4-mobile: 600 1rem/1.25rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
 
   /* font-sizes */
   --fs-xl: 3rem;
@@ -322,17 +340,28 @@ button {
   background-repeat: no-repeat;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: var(--maxwidth);
-  padding: 0 var(--h-spacing);
-}
-section {
-  margin: var(--v-spacing) 0;
-  padding: 0;
-  background-color: inherit;
+.gutter-bottom {
+  margin-bottom: 2rem !important;
 }
 
 main {
-  padding-top: 6rem;
+  background-color: var(--clr-background-default);
+  margin-inline: auto;
+  position: relative;
+}
+
+main p,
+main ul,
+main ol {
+  margin-bottom: 1em;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+main p > a {
+  color: var(--color-docs-text-link-default);
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+  text-decoration-skip-ink: auto;
 }

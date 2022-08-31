@@ -3,20 +3,19 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <div className="hero-reading">
-          <div className="hero__content--container">
+      <div className="hero__content">
+        <div className="hero-heading">
+          <div className="hero__content-container">
             <h1 className="heading--jumbo">
-              &quot;Build anything.&quot;
+              Build anything.
               <br />
-              &quot;Reimagine commerce.&quot;
+              Reimagine commerce.
             </h1>
             <p className="heading--excerpt gutter-bottom">
-              &quot;Millions of merchants trust Shopify to run their
-              business—but they need developers to build the tools that help
-              them achieve independence. Access powerful APIs to bring your
-              ideas to life on the platform that makes commerce better for
-              everyone.&quot;
+              Millions of merchants trust Shopify to run their business—but they
+              need developers to build the tools that help them achieve
+              independence. Access powerful APIs to bring your ideas to life on
+              the platform that makes commerce better for everyone.
             </p>
           </div>
         </div>
@@ -24,18 +23,18 @@ export default function Hero() {
           <div className="hero-2"></div>
         </div>
         <div className="hero-features">
-          <ul className="hero__content--container">
+          <ul className="hero__content-container">
             <li className="gutter-bottom">
               <p className="heading--3">
                 Develop apps that solve complex merchant problems
               </p>
               <p>
-                &quot; Expansive &quot;
-                <a href="">GraphQL</a>
-                &quot; and &quot;
-                <a href="">REST APIs</a>
-                &quot; let you integrate into Shopify &apos;s admin, online
-                store, checkout, and more. &quot;
+                Expansive
+                <a href=""> GraphQL </a>
+                and
+                <a href=""> REST APIs </a>
+                let you integrate into Shopify &apos;s admin, online store,
+                checkout, and more.
               </p>
             </li>
             <li className="gutter-bottom">
@@ -43,35 +42,32 @@ export default function Hero() {
                 Integrate seamlessly into existing workflows
               </p>
               <p>
-                &quot; Embed your app’s features with &quot;
-                <a href="">App Bridge</a>
-                &quot;. Create high quality experiences with the ready-to-build
-                &quot;
-                <a href="">Polaris</a>
-                &quot; component library. &quot;
+                Embed your app’s features with
+                <a href=""> App Bridge</a>. Create high quality experiences with
+                the ready-to-build
+                <a href=""> Polaris </a>
+                component library.
               </p>
             </li>
             <li className="gutter-bottom">
               <p className="heading--3">Help merchants express themselves</p>
               <p>
-                &quot; Use &quot;
-                <a href="">Liquid</a>
-                &quot;. to build beautiful theme templates. Get started with
-                &quot;
-                <a href="">Dawn</a>
-                &quot;, our blazingly fast, accessible reference theme. &quot;
+                Use
+                <a href=""> Liquid</a> to build beautiful theme templates. Get
+                started with
+                <a href=""> Dawn</a>, our blazingly fast, accessible reference
+                theme.
               </p>
             </li>
             <li className="gutter-bottom">
               <p className="heading--3">Ship custom shopping experiences</p>
               <p>
-                &quot; Add Shopify to any web, mobile, or gaming experience with
-                the powerful &quot;
-                <a href="">Storefront API</a>
-                &quot; and SDKs, plus any front-end stack you want. Use &quot;
-                <a href="">Marketplace Kit</a>
-                &quot;, to connect your platform and its users to millions of
-                Shopify merchants and their products. &quot;
+                Add Shopify to any web, mobile, or gaming experience with the
+                powerful
+                <a href=""> Storefront API </a>
+                and SDKs, plus any front-end stack you want. Use
+                <a href=""> Marketplace Kit</a>, to connect your platform and
+                its users to millions of Shopify merchants and their products.
               </p>
             </li>
           </ul>
@@ -85,7 +81,7 @@ export default function Hero() {
                       <div className="docs-icon docs-icon--48 docs-icon--apps"></div>
 
                       <div className="docs-card__content">
-                        <div className="docs-card__heading  ">
+                        <div className="docs-card__heading">
                           <span className="heading--3">Apps</span>
                         </div>
                       </div>
@@ -134,6 +130,9 @@ export default function Hero() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="hide--wide hero-image">
+          <div className="hero-3"></div>
         </div>
       </div>
       <div className="hero__illustration hero-image">

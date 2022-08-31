@@ -1,0 +1,200 @@
+.docs-banner {
+  --horizontalPadding: 2rem;
+  --horizontalMargin: 1.25rem;
+
+  height: 100%;
+  margin: 0 var(--horizontalMargin);
+  padding: 4rem var(--horizontalPadding);
+  background-color: #eafaf3;
+  border-radius: 1rem;
+  color: hsl(var(--clr-text-default));
+}
+@media screen and (max-width: 79.9375em) {
+  .docs-banner {
+    --horizontalMargin: auto;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 59.9375em) {
+  .docs-banner {
+    padding: 1.5rem 1rem;
+    --horizontalMargin: 1.25rem;
+    width: unset;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  .docs-banner {
+    --horizontalPadding: 1rem;
+    --horizontalMargin: 0;
+  }
+}
+.docs-banner__container {
+  --columns: 1fr 1fr;
+  --gap: 4rem;
+
+  display: grid;
+  align-items: self-start;
+  grid-template-columns: var(--columns);
+  gap: var(--gap);
+  max-width: var(--maincontent-max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+@media screen and (max-width: 39.9375em) {
+  .docs-banner__container {
+    --columns: 1fr;
+  }
+}
+.homepage-container {
+  max-width: var(--maincontent-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 79.9375em) {
+  .homepage-container {
+    max-width: 640px;
+  }
+}
+@media screen and (max-width: 79.9375em) {
+  .docs-banner__container {
+    --columns: 1fr;
+    --gap: 2rem;
+  }
+}
+h1:not([class]),
+.heading--1 {
+  font-kerning: normal;
+  font: var(--font-sans-font-headline1-mobile);
+  font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
+  display: block;
+  letter-spacing: -0.0207142857em;
+}
+.docs-banner__content h2 {
+  color: #202223;
+}
+h3:not([class]),
+.heading--3 {
+  font: var(--font-sans-font-headline3-mobile);
+  color: #202223;
+  margin-bottom: 0.75rem;
+}
+.docs-banner__content p:not([class]) {
+  margin-bottom: 0;
+}
+.homepage-stats-box {
+  --columns: 1fr;
+  --padding: 5rem 4rem;
+  --maxWidth: 400px;
+
+  display: grid;
+  grid-template-columns: var(--columns);
+  place-self: end;
+  max-width: var(--maxWidth);
+  padding: var(--padding);
+  border: 3px solid #000000;
+  background-color: #fafbfb;
+  box-shadow: 9px 9px 0 0 #000000;
+}
+@media screen and (max-width: 79.9375em) {
+  .homepage-stats-box {
+    --columns: 1fr 1fr;
+    --padding: 1.5rem 2rem;
+    --maxWidth: 100%;
+    place-self: unset;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  .homepage-stats-box {
+    --columns: 1fr;
+  }
+}
+.homepage-stats-box__row {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  font: var(--font-sans-font-body-minor-base);
+}
+@media screen and (max-width: 59.9375em) {
+  .homepage-stats-box__row {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  .homepage-stats-box__row {
+    margin-right: 0;
+  }
+}
+.homepage-stats-box__row:not(:last-child) {
+  margin-bottom: 32px;
+}
+.docs-icon {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  margin-right: 0.75rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+.docs-icon--48 {
+  width: 48px;
+  height: 48px;
+}
+.docs-icon--hearts.docs-icon--48 {
+  background-size: contain;
+  background-image: url("../public/icon/coin.avif");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+  only screen and (min-resolution: 1.3dppx) {
+  .docs-icon--coin.docs-icon--48 {
+    background-size: contain;
+    background-image: url("../public/icon/coin-2x.avif");
+  }
+}
+h4,
+.heading--4 {
+  display: block;
+}
+h4:not([class]),
+.heading--4 {
+  font: var(--font-sans-font-headline4-mobile);
+  color: #202223;
+}
+.homepage-stats-box__row .heading--4 {
+  margin-bottom: 0;
+}
+.docs-icon--hearts.docs-icon--48 {
+  background-size: contain;
+  background-image: url("../public/icon/hearts.avif");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+  only screen and (min-resolution: 1.3dppx) {
+  .docs-icon--hearts.docs-icon--48 {
+    background-size: contain;
+    background-image: url("../public/icon/hearts-2x.png");
+  }
+}
+.row-icon {
+  position: relative;
+}
+.docs-icon--app.docs-icon--48 {
+  background-size: contain;
+  background-image: url("../public/icon/app.avif");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+  only screen and (min-resolution: 1.3dppx) {
+  .docs-icon--app.docs-icon--48 {
+    background-size: contain;
+    background-image: url("../public/icon/app-2x.avif");
+  }
+}
+.row-icon__helper {
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  font: var(--font-mono-font-body-minor-base);
+  font-weight: 600;
+  color: #000000;
+}
