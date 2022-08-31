@@ -1,9 +1,9 @@
-import useScreenSize from "../hooks/useScreenSize";
+import useScreenSize from "../../hooks/useScreenSize";
 import { useState } from "react";
-import useTransition from "../hooks/useTransition";
-import NavDrawer from "./Nav/NavDrawer";
-import MarketingNav from "./Nav/MarketingNav";
-import NavMobile from "./Nav/NavMobile";
+import useTransition from "../../hooks/useTransition";
+import NavDrawer from "./NavDrawer";
+import MarketingNav from "./MarketingNav";
+import NavMobile from "./NavMobile";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
