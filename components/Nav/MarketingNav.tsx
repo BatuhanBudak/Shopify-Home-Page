@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import useToggle from "../../hooks/useToggle";
-import { ChevronDown, Magnify, Dark, Sun } from "../Icons";
+import { ChevronDown, Magnify, Dark, Sun, BackSlash } from "../Icons";
 
 export default function MarketingNav() {
   const [searchFormVisible, toggleSearchForm] = useToggle();
@@ -195,13 +195,28 @@ export default function MarketingNav() {
           onClick={toggleSearchForm}
           aria-controls="search-modal"
         >
-          <Magnify
-            classname="icon search-mobile-button__icon"
-            hidden="true"
-            focus="false"
-            id="icon-search-magnify"
-            title="Search"
-          />
+          <span className="search-mobile-button-icon-container-big">
+            <Magnify
+              classname="icon search-mobile-button__icon"
+              hidden="true"
+              focus="false"
+              id="icon-search-magnify"
+              title="Search"
+            />
+          </span>
+          <span className="search-label">Search</span>
+          <span className="backslash-icon-container">
+            <BackSlash />
+          </span>
+          <span className="search-mobile-button-icon-container">
+            <Magnify
+              classname="icon search-mobile-button__icon"
+              hidden="true"
+              focus="false"
+              id="icon-search-magnify"
+              title="Search"
+            />
+          </span>
         </button>
         {searchFormVisible && (
           <div

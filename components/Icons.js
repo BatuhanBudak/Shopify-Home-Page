@@ -104,3 +104,58 @@ export const Close = () => (
     />
   </svg>
 );
+
+export const BackSlash = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 20 21"
+    className="backslash-icon"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <g filter="url(#a)">
+      <rect width="20" height="20" fill="none" rx="4"></rect>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        fill="currentColor"
+        d="m7.218 15.32 4.224-11.28h1.356L8.574 15.32H7.218z"
+      ></path>
+      <rect
+        width="19"
+        height="19"
+        x=".5"
+        y=".5"
+        className="backslash-icon-fill"
+        rx="3.5"
+      ></rect>
+    </g>
+    <defs>
+      <filter
+        id="a"
+        width="20"
+        height="21"
+        x="0"
+        y="0"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        ></feColorMatrix>
+        <feOffset dy="1"></feOffset>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix>
+        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_dropShadow"
+          result="shape"
+        ></feBlend>
+      </filter>
+    </defs>
+  </svg>
+);
