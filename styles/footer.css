@@ -14,7 +14,7 @@ footer {
 .footer-top {
   position: relative;
   padding-block: 4rem;
-  background-color: #fafbfb;
+  background-color: hsl(var(--clr-background-surface-default));
   border-radius: 1rem 1rem 0 0;
 }
 .grid {
@@ -87,7 +87,7 @@ h5,
 h5:not([class]),
 .heading--5 {
   font: var(--font-sans-font-headline5-mobile);
-  color: #202223;
+  color: hsl(var(--clr-text-headline-default));
 }
 .footer-subhead.heading--5 {
   font-size: 0.75rem;
@@ -100,7 +100,7 @@ h5:not([class]),
   display: block;
   font-size: 0.875em;
   padding: 0.375em 0;
-  color: var(--clr-text-default);
+  color: hsl(var(--clr-text-default));
   transition: color 300ms ease-in-out;
 }
 .footer-link--twitch::before {
@@ -142,7 +142,7 @@ h5:not([class]),
 .footer-bottom {
   position: relative;
   padding-block: 0;
-  background-color: #f6f6f7;
+  background-color: #20292b;
   border-radius: 0 0 1rem 1rem;
   margin-bottom: 0.25rem;
 }
@@ -181,7 +181,7 @@ h5:not([class]),
 
 .footer-bottom a {
   display: inline-block;
-  color: #6d7175;
+  color: hsl(var(--clr-text-subdued));
   transition: color 300ms ease-in-out;
   border-bottom: none;
   font-family: var(--font-sans-fontfamily);

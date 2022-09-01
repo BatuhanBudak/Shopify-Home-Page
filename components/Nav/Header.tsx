@@ -5,7 +5,7 @@ import NavDrawer from "./NavDrawer";
 import MarketingNav from "./MarketingNav";
 import NavMobile from "./NavMobile";
 
-export default function Header() {
+export default function Header({ toggleThemeMode }) {
   const [navOpen, setNavOpen] = useState(false);
   const [isTransitioning, toggleTransition] = useTransition();
   const windowWidth = useScreenSize();
@@ -38,7 +38,7 @@ export default function Header() {
           aria-label="Main Menu"
         >
           <NavMobile openNav={openNav} navOpen={navOpen} />
-          <MarketingNav />
+          <MarketingNav toggleThemeMode={toggleThemeMode} />
         </nav>
       </div>
 
@@ -46,6 +46,7 @@ export default function Header() {
         closeNav={closeNav}
         navOpen={navOpen}
         isTransitioning={isTransitioning}
+        toggleThemeMode={toggleThemeMode}
       />
     </header>
   );

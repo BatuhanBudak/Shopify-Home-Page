@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100vh;
+  background-color: var(--clr-background-default);
 }
 html:focus-within {
   scroll-behavior: smooth;
@@ -16,29 +17,6 @@ html:focus-within {
 }
 
 :root {
-  /* colors */
-  --clr-black: 24 11% 9%;
-  --clr-grey: 20 3% 35%;
-  --clr-white: 0 0% 100%;
-  --clr-light: 30 50% 98%;
-  --clr-blue: 194 98% 32%;
-  --clr-brown: 36 99% 33%;
-  --clr-purple: 255 61% 42%;
-  --clr-lbrown: 24 33% 94%;
-  --clr-text-default: 210 3% 37%;
-  --clr-text-bright: 200 4% 13%;
-  --clr-sidebar-background: 240 6% 97%;
-  --clr-link-default: 221 34% 42%;
-  --clr-link-hover: 220, 36%, 25%;
-  --clr-link-highlight: 230, 43%, 97%;
-  --clr-link-active: 220, 33%, 49%;
-  --clr-link-visited: 221, 34%, 42;
-  --clr-background-default: hsl(var(--clr-white));
-  --clr-background-darker: hsl(240, 6%, 97%);
-  --clr-divider-default: 210 7% 84%;
-  --clr-icon-default: 109 113 117;
-  --clr--fill-icon-default: 210 4% 44%;
-
   /* font-families */
 
   --font-sans-fontfamily: "Inter", -apple-system, BlinkMacSystemFont,
@@ -73,6 +51,12 @@ html:focus-within {
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
   --font-sans-font-headline5-mobile: 600 0.875rem/1rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-headline1-base: 600 2rem/2.5rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-sans-font-headline3-base: 600 1.25rem/1.5rem "Inter", -apple-system,
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
   /* font-sizes */
@@ -113,6 +97,232 @@ html:focus-within {
   --icon-size-default: 1.25rem;
   --icon-size-lg: 1.5rem;
   --menu-is-open-vh: 8.96px;
+
+  --size-25: 0.0625rem;
+  --size-50: 0.125rem;
+  --size-75: 0.1875rem;
+  --size-100: 0.25rem;
+  --size-150: 0.375rem;
+  --size-200: 0.5rem;
+  --size-250: 0.625rem;
+  --size-300: 0.75rem;
+  --size-350: 0.875rem;
+  --size-400: 1rem;
+  --size-450: 1.125rem;
+  --size-500: 1.25rem;
+  --size-600: 1.5rem;
+  --size-700: 1.75rem;
+  --size-800: 2rem;
+  --size-900: 2.25rem;
+  --size-1000: 2.5rem;
+  --size-1100: 2.75rem;
+  --size-1200: 3rem;
+  --size-1300: 3.25rem;
+  --size-1400: 3.5rem;
+  --size-1500: 3.75rem;
+  --size-1600: 4rem;
+  --size-1700: 4.25rem;
+  --size-1800: 4.5rem;
+  --size-1900: 4.75rem;
+  --size-2000: 5rem;
+  --size-2100: 5.25rem;
+  --size-2200: 5.5rem;
+  --size-2300: 5.75rem;
+  --size-2400: 6rem;
+  --size-2500: 6.25rem;
+  --size-base-fontsize-copy-xxs: 0.625rem;
+  --size-base-fontsize-copy-xs: 0.75rem;
+  --size-base-fontsize-copy-sm: 0.875rem;
+  --size-base-fontsize-copy-md: 1rem;
+  --size-base-fontsize-copy-lg: 1.125rem;
+  --size-base-fontsize-copy-xl: 1.25rem;
+  --size-base-fontsize-copy-xxl: 1.5rem;
+  --size-base-fontsize-headline-xxs: 0.875rem;
+  --size-base-fontsize-headline-xs: 1rem;
+  --size-base-fontsize-headline-sm: 1.25rem;
+  --size-base-fontsize-headline-md: 1.5rem;
+  --size-base-fontsize-headline-lg: 2rem;
+  --size-base-fontsize-headline-xl: 2.25rem;
+  --size-base-fontsize-headline-xxl: 3rem;
+  --size-base-lineheight-copy-xxs: 1rem;
+  --size-base-lineheight-copy-xs: 1rem;
+  --size-base-lineheight-copy-sm: 1.25rem;
+  --size-base-lineheight-copy-md: 1.5rem;
+  --size-base-lineheight-copy-lg: 1.75rem;
+  --size-base-lineheight-copy-xl: 2rem;
+  --size-base-lineheight-copy-xxl: 2.25rem;
+  --size-base-lineheight-headline-xxs: 1rem;
+  --size-base-lineheight-headline-xs: 1.25rem;
+  --size-base-lineheight-headline-sm: 1.5rem;
+  --size-base-lineheight-headline-md: 1.75rem;
+  --size-base-lineheight-headline-lg: 2.5rem;
+  --size-base-lineheight-headline-xl: 2.75rem;
+  --size-base-lineheight-headline-xxl: 3.75rem;
+  --size-base-radius-xs: 0.25rem;
+  --size-base-radius-sm: 0.5rem;
+  --size-base-radius-md: 0.75rem;
+  --size-base-radius-lg: 1rem;
+  --size-base-border-thin: 0.0625rem;
+  --size-base-border-medium: 0.125rem;
+  --size-base-border-thick: 0.1875rem;
+  --size-base-layout-gutter-xs: 1rem;
+  --size-base-layout-gutter-sm: 1rem;
+  --size-base-layout-gutter-md: 1.25rem;
+  --size-base-layout-gutter-lg: 1.25rem;
+  --size-base-layout-gutter-xl: 1.25rem;
+  --size-base-layout-layoutcontainer-xs: 100rem;
+  --size-base-layout-layoutcontainer-sm: 100rem;
+  --size-base-layout-layoutcontainer-md: 100rem;
+  --size-base-layout-layoutcontainer-lg: 76.75rem;
+  --size-base-layout-layoutcontainer-xl: 76.75rem;
+  --size-base-layout-sidebar-xs: 13.75rem;
+  --size-base-layout-sidebar-sm: 13.75rem;
+  --size-base-layout-sidebar-md: 13.75rem;
+  --size-base-layout-sidebar-lg: 13.75rem;
+  --size-base-layout-sidebar-xl: 17.5rem;
+  --size-basedense-lineheight-copy-xxs: 0.75rem;
+  --size-basedense-lineheight-copy-xs: 1rem;
+  --size-basedense-lineheight-copy-sm: 1rem;
+  --size-basedense-lineheight-copy-md: 1.25rem;
+  --size-basedense-lineheight-copy-lg: 1.5rem;
+  --size-basedense-lineheight-copy-xl: 1.75rem;
+  --size-basedense-lineheight-copy-xxl: 2rem;
+  --size-mobile-fontsize-headline-xxs: 0.875rem;
+  --size-mobile-fontsize-headline-xs: 1rem;
+  --size-mobile-fontsize-headline-sm: 1.125rem;
+  --size-mobile-fontsize-headline-md: 1.25rem;
+  --size-mobile-fontsize-headline-lg: 1.5rem;
+  --size-mobile-fontsize-headline-xl: 1.75rem;
+  --size-mobile-fontsize-headline-xxl: 2rem;
+  --size-mobile-lineheight-headline-xxs: 1rem;
+  --size-mobile-lineheight-headline-xs: 1.25rem;
+  --size-mobile-lineheight-headline-sm: 1.25rem;
+  --size-mobile-lineheight-headline-md: 1.5rem;
+  --size-mobile-lineheight-headline-lg: 1.75rem;
+  --size-mobile-lineheight-headline-xl: 2rem;
+  --size-mobile-lineheight-headline-xxl: 2.25rem;
+
+  --motion-base-delay-none: 0;
+  --motion-base-delay-shortest: 20ms;
+  --motion-base-delay-shorter: 50ms;
+  --motion-base-delay-short: 100ms;
+  --motion-base-delay-long: 200ms;
+  --motion-base-delay-longer: 400ms;
+  --motion-base-delay-longest: 600ms;
+  --motion-base-ease-linear: cubic-bezier(0, 0, 1, 1);
+  --motion-base-ease-in: cubic-bezier(1, 0.19, 0.99, 0.68);
+  --motion-base-ease-out: cubic-bezier(0.19, 0.99, 0.68, 1);
+  --motion-base-ease-inout: cubic-bezier(0.75, 0.08, 0.25, 0.92);
+  --motion-base-transition-background-color: background-color 200ms linear;
+  --motion-base-transition-border-color: border-color 200ms linear;
+  --motion-base-transition-theme-modes: background-color 200ms linear,
+    border-color 200ms linear;
+  --space-base-margin-copy-xxs: 0.25rem;
+  --space-base-margin-copy-xs: 0.5rem;
+  --space-base-margin-copy-sm: 0.75rem;
+  --space-base-margin-copy-md: 1rem;
+  --space-base-margin-copy-lg: 1.5rem;
+  --space-base-margin-copy-xl: 2.25rem;
+  --space-base-margin-copy-xxl: 3rem;
+  --space-base-margin-copy-xxxl: 3.75rem;
+  --space-base-margin-inline-xxs: 0.25rem;
+  --space-base-margin-inline-xs: 0.5rem;
+  --space-base-margin-inline-sm: 0.75rem;
+  --space-base-margin-inline-md: 1rem;
+  --space-base-margin-inline-lg: 1.25rem;
+  --space-base-margin-inline-xl: 1.5rem;
+  --space-base-margin-inline-xxl: 1.75rem;
+  --space-base-margin-stack-xxs: 0.25rem;
+  --space-base-margin-stack-xs: 0.5rem;
+  --space-base-margin-stack-sm: 0.75rem;
+  --space-base-margin-stack-md: 1rem;
+  --space-base-margin-stack-lg: 1.5rem;
+  --space-base-margin-stack-xl: 2.25rem;
+  --space-base-margin-stack-xxl: 3rem;
+  --space-base-margin-stack-xxxl: 3.75rem;
+  --space-base-margin-heading-xxs: 0.75rem;
+  --space-base-margin-heading-xs: 0.75rem;
+  --space-base-margin-heading-sm: 1rem;
+  --space-base-margin-heading-md: 1rem;
+  --space-base-margin-heading-lg: 1.5rem;
+  --space-base-margin-heading-xl: 1.5rem;
+  --space-base-margin-heading-xxl: 1.5rem;
+  --space-base-padding-inline-xxs: 0.25rem;
+  --space-base-padding-inline-xs: 0.5rem;
+  --space-base-padding-inline-sm: 0.75rem;
+  --space-base-padding-inline-md: 1rem;
+  --space-base-padding-inline-lg: 1.25rem;
+  --space-base-padding-inline-xl: 1.5rem;
+  --space-base-padding-inline-xxl: 1.75rem;
+  --space-base-padding-inline-xxxl: 2rem;
+  --space-base-inset-sm: 0.25rem;
+  --space-base-inset-md: 0.5rem;
+  --space-base-inset-lg: 0.75rem;
+  --space-base-inset-xl: 1rem;
+  --space-base-inset-xxl: 1.25rem;
+  --space-base-inset-xxxl: 1.5rem;
+}
+
+:root,
+.ThemeMode-default {
+  /* colors */
+  --clr-black: 24 11% 9%;
+  --clr-grey: 20 3% 35%;
+  --clr-white: 0 0% 100%;
+  --clr-light: 30 50% 98%;
+  --clr-blue: 194 98% 32%;
+  --clr-brown: 36 99% 33%;
+  --clr-purple: 255 61% 42%;
+  --clr-lbrown: 24 33% 94%;
+  --clr-text-default: 210 3% 37%;
+  --clr-text-bright: 200 4% 13%;
+  --clr-text-headline-default: 200 4% 13%;
+  --clr-text-subdued: 210 4% 44%;
+  --clr-grayscale-05: 220 6% 90%;
+  --clr-border-default: 210 7% 84%;
+  --clr-sidebar-background: 240 6% 97%;
+  --clr-link-default: 221 34% 42%;
+  --clr-link-hover: 220, 36%, 25%;
+  --clr-link-highlight: 230, 43%, 97%;
+  --clr-link-active: 220, 33%, 49%;
+  --clr-link-visited: 221, 34%, 42;
+  --clr-background-default: hsl(var(--clr-white));
+  --clr-background-darker: hsl(240, 7%, 97%);
+  --clr-background-surface-default: 180 11% 98%;
+  --clr-divider-default: 210 7% 84%;
+  --clr-icon-default: 109 113 117;
+  --clr--fill-icon-default: 210 4% 44%;
+}
+
+.ThemeMode-dark {
+  /* colors */
+
+  --clr-white: 0 0% 100%;
+  --clr-light: 30 50% 98%;
+  --clr-blue: 194 98% 32%;
+  --clr-brown: 36 99% 33%;
+  --clr-purple: 255 61% 42%;
+  --clr-lbrown: 24 33% 94%;
+
+  --clr-grayscale-05: 210 3% 15%;
+  --clr-text-default: 240 5% 85%;
+  --clr-text-bright: 0 0% 100%;
+  --clr-text-subdued: 207 4% 56%;
+  --clr-text-headline-default: 180 10% 94%;
+  --clr-link-default: 223 87% 85%;
+  --clr-link-hover: 224 100% 89%;
+  --clr-link-highlight: 211 100% 16%;
+  --clr-link-active: 225 100% 92%;
+  --clr-link-visited: 223 87% 85%;
+  --clr-border-default: 190 26% 19%;
+  --clr-divider-default: 190 26% 19%;
+  --clr-icon-default: 157 27% 38%;
+  --clr--fill-icon-default: 240 5% 85%;
+  --clr-background-default: hsl(190, 19%, 6%);
+  --clr-background-surface-default: 187 18% 10%;
+  --clr-sidebar-background: 187 18% 10%;
+
+  --clr-background-darker: hsl(240, 7%, 97%);
 }
 
 @media (min-width: 26.3125em) {
@@ -250,17 +460,6 @@ form {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  body {
-    color: hsl(var(--clr-white));
-    background: hsl(var(--clr-black));
-  }
-}
-
 body {
   font-family: var(--font-sans-fontfamily);
   line-height: 1.5;
@@ -275,15 +474,13 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: hsl(var(--clr-link));
+  color: hsl(var(--clr-link-default));
 }
 a:hover,
 a:focus {
   color: hsl(var(--clr-link-hover));
 }
-a:visited {
-  color: hsl(var(--clr-link-visited));
-}
+
 a::selection {
   color: hsl(var(--clr-link-highlight));
 }
@@ -370,4 +567,8 @@ main p > a {
   text-decoration-style: solid;
   text-decoration-color: currentColor;
   text-decoration-skip-ink: auto;
+}
+.ThemeMode-dark,
+.ThemeMode-default {
+  background-color: var(--clr-background-default);
 }

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import useToggle from "../../hooks/useToggle";
 import { ChevronDown, Magnify, Dark, Sun, BackSlash } from "../Icons";
 
-export default function MarketingNav() {
+export default function MarketingNav({ toggleThemeMode }) {
   const [searchFormVisible, toggleSearchForm] = useToggle();
   const [accordionVisible, toggleAccordion] = useToggle();
   const [searchValue, setSearchValue] = useState("");
@@ -268,6 +268,7 @@ export default function MarketingNav() {
             id="theme-mode-toggle"
             className="theme-mode-button"
             aria-label="View dark mode"
+            onClick={toggleThemeMode}
           >
             <Dark />
             <Sun />

@@ -1,7 +1,12 @@
 import { Dark, Sun, Close } from "../Icons";
 import useToggle from "../../hooks/useToggle";
 
-export default function NavDrawer({ navOpen, isTransitioning, closeNav }) {
+export default function NavDrawer({
+  toggleThemeMode,
+  navOpen,
+  isTransitioning,
+  closeNav,
+}) {
   const [secondAccordionOpen, toggleSecondAccordion] = useToggle();
 
   return (
@@ -182,6 +187,7 @@ export default function NavDrawer({ navOpen, isTransitioning, closeNav }) {
               id="theme-mode-toggle-sidebar"
               className="theme-mode-button-sidebar"
               aria-label="View dark mode"
+              onClick={toggleThemeMode}
             >
               <Dark />
               <Sun />

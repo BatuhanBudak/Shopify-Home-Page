@@ -62,7 +62,7 @@ export const Magnify = ({
 
 export const Dark = () => (
   <svg
-    className="theme-mode-toggle-svg dark-to-light"
+    className="theme-mode-toggle-svg light-to-dark"
     width="24px"
     height="24px"
     viewBox="0 0 24 24"
@@ -76,7 +76,7 @@ export const Dark = () => (
 
 export const Sun = () => (
   <svg
-    className="theme-mode-toggle-svg light-to-dark"
+    className="theme-mode-toggle-svg dark-to-light"
     width="24px"
     height="24px"
     viewBox="0 0 24 24"

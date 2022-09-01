@@ -68,6 +68,10 @@
   background-color: #f4f6ff;
   padding: 0.75rem;
 }
+.ThemeMode-dark .community__grid .title-card .docs-card {
+  background-color: var(--clr-background-default);
+  border: 0.125rem solid #9db8f7;
+}
 .community__grid .docs-card__body {
   display: flex;
   align-items: flex-start;
@@ -92,7 +96,7 @@
   margin-bottom: 0;
 }
 .docs-card__content {
-  color: var(--clr-text-default);
+  color: hsl(var(--clr-text-default));
   width: 100%;
 }
 .docs-icon--forums.docs-icon--48 {
@@ -117,7 +121,7 @@
 .docs-card__heading--secondary h3,
 .docs-card__heading--secondary h4,
 .docs-card__heading--secondary p {
-  color: #202223;
+  color: hsl(var(--clr-text-headline-default));
   font-weight: 600;
   position: relative;
 }
@@ -136,8 +140,16 @@
   margin-left: 0.3125rem;
   white-space: nowrap;
 }
+.ThemeMode-dark .docs-card__heading--secondary h1::after,
+.ThemeMode-dark .docs-card__heading--secondary h2::after,
+.ThemeMode-dark .docs-card__heading--secondary h3::after,
+.ThemeMode-dark .docs-card__heading--secondary h4::after,
+.ThemeMode-dark .docs-card__heading--secondary p::after {
+  content: url("../public/icon/right-arrow-white.svg");
+}
 .docs-card__text {
   font-size: 0.875rem;
+  color: hsl(var(--clr-text-default));
 }
 .docs-icon--slack.docs-icon--48 {
   background-size: contain;
