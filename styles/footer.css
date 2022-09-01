@@ -1,0 +1,199 @@
+footer {
+  margin-top: auto;
+}
+.footer-top,
+.footer-bottom {
+  margin: 0 1.25rem;
+}
+@media screen and (max-width: 959.98px) {
+  .footer-top,
+  .footer-bottom {
+    margin: 0;
+  }
+}
+.footer-top {
+  position: relative;
+  padding-block: 4rem;
+  background-color: #fafbfb;
+  border-radius: 1rem 1rem 0 0;
+}
+.grid {
+  padding-inline: 2%;
+}
+@supports (display: flow-root) {
+  .grid {
+    display: flow-root;
+  }
+}
+
+@supports (display: flow-root) {
+  .grid--equal-height,
+  .grid--vertically-centered {
+    display: unset;
+  }
+}
+.grid--equal-height,
+.grid--vertically-centered {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid--vertically-centered {
+  align-items: center;
+}
+.footer-top .grid,
+.footer-bottom .grid {
+  max-width: var(--maincontent-max-width);
+  margin: 0 auto;
+}
+@media screen and (min-width: 60em) {
+  .footer-top .grid,
+  .footer-bottom .grid {
+    padding-inline: 0;
+  }
+}
+.grid__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 40em) and (max-width: 59.9375em) {
+  .grid__item {
+    padding-inline: 1rem;
+  }
+}
+.grid__item--mobile-up-half {
+  width: 50%;
+}
+@media screen and (min-width: 40em) {
+  .grid__item--tablet-up-third {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 60em) {
+  .grid__item--desktop-up-2 {
+    width: 16.6666666667%;
+  }
+}
+h5,
+.heading--5 {
+  display: block;
+}
+.footer-subhead {
+  letter-spacing: normal;
+  margin: 0 0 1rem;
+}
+h5:not([class]),
+.heading--5 {
+  font: var(--font-sans-font-headline5-mobile);
+  color: #202223;
+}
+.footer-subhead.heading--5 {
+  font-size: 0.75rem;
+  text-transform: none;
+}
+.footer-top--list {
+  margin-bottom: 2rem;
+}
+.footer-link {
+  display: block;
+  font-size: 0.875em;
+  padding: 0.375em 0;
+  color: var(--clr-text-default);
+  transition: color 300ms ease-in-out;
+}
+.footer-link--twitch::before {
+  content: "";
+  display: inline-block;
+  background-color: hsl(var(--clr--fill-icon-default));
+  mask-image: url("../public/icon/twitch.svg");
+  float: left;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  margin: 0.125rem 0.5rem 0.125rem 0;
+  height: 1rem;
+  width: 1rem;
+}
+.footer-link--youtube::before {
+  content: "";
+  display: inline-block;
+  background-color: hsl(var(--clr--fill-icon-default));
+  mask-image: url("../public/icon/youtube.svg");
+  float: left;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  margin: 0.125rem 0.5rem 0.125rem 0;
+  height: 1rem;
+  width: 1rem;
+}
+.footer-link--twitter::before {
+  content: "";
+  display: inline-block;
+  background-color: hsl(var(--clr--fill-icon-default));
+  mask-image: url("../public/icon/twitter.svg");
+  float: left;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  margin: 0.125rem 0.5rem 0.125rem 0;
+  height: 1rem;
+  width: 1rem;
+}
+.footer-bottom {
+  position: relative;
+  padding-block: 0;
+  background-color: #f6f6f7;
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 0.25rem;
+}
+@media screen and (max-width: 1279.98px) {
+  .footer-bottom {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
+.footer-top + .footer-bottom {
+  border: none;
+}
+@media screen and (max-width: 39.9375em) {
+  .footer-nav {
+    text-align: center;
+    padding-block: 2rem 1.5625em;
+  }
+}
+.footer-bottom .footer-nav {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.footer-nav__list,
+.footer-nav__list-item {
+  display: inline-block;
+}
+.footer-nav__list {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 39.9375em) {
+  .footer-nav a {
+    margin-inline: 0.5em;
+    padding-top: 0.3125em;
+  }
+}
+
+.footer-bottom a {
+  display: inline-block;
+  color: #6d7175;
+  transition: color 300ms ease-in-out;
+  border-bottom: none;
+  font-family: var(--font-sans-fontfamily);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-right: 1em;
+}
+@media screen and (min-width: 40em) {
+  .footer-nav a {
+    line-height: 70px;
+    border-bottom: 2px solid var(--color-docs-background-surface-default);
+    transition-property: border-color, fill;
+    transition-duration: 300ms;
+  }
+}

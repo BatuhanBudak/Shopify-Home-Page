@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 html,
 body {
   padding: 0;
@@ -50,6 +51,9 @@ html:focus-within {
   --font-sans-font-nav-item-base: 400 0.875rem/1.25rem "Inter", -apple-system,
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
+  --font-sans-font-display1-base: 800 3rem/3.75rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
   --font-sans-font-display1-mobile: 800 2rem/2.25rem "Inter", -apple-system,
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
@@ -68,7 +72,9 @@ html:focus-within {
   --font-sans-font-headline4-mobile: 600 1rem/1.25rem "Inter", -apple-system,
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
-
+  --font-sans-font-headline5-mobile: 600 0.875rem/1rem "Inter", -apple-system,
+    BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
   /* font-sizes */
   --fs-xl: 3rem;
   --fs-l: 2rem;
