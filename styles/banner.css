@@ -158,7 +158,7 @@ h3:not([class]),
   width: 48px;
   height: 48px;
 }
-.docs-icon--hearts.docs-icon--48 {
+.docs-icon--coin.docs-icon--48 {
   background-size: contain;
   background-image: url("../public/icon/coin.avif");
 }

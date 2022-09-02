@@ -59,15 +59,6 @@ html:focus-within {
   --font-sans-font-headline3-base: 600 1.25rem/1.5rem "Inter", -apple-system,
     BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
-  /* font-sizes */
-  --fs-xl: 3rem;
-  --fs-l: 2rem;
-  --fs-m: 1.75rem;
-  --fs-s: 1.45rem;
-  --fs-xs: 1.15rem;
-  --fs-xxs: 1rem;
-  --fs-xxs: 0.83rem;
-  --fs-tiny: 0.77rem;
 
   /* spacing */
   --maxwidth: 70.22rem;
@@ -117,19 +108,7 @@ html:focus-within {
   --size-1000: 2.5rem;
   --size-1100: 2.75rem;
   --size-1200: 3rem;
-  --size-1300: 3.25rem;
-  --size-1400: 3.5rem;
-  --size-1500: 3.75rem;
-  --size-1600: 4rem;
-  --size-1700: 4.25rem;
-  --size-1800: 4.5rem;
-  --size-1900: 4.75rem;
-  --size-2000: 5rem;
-  --size-2100: 5.25rem;
-  --size-2200: 5.5rem;
-  --size-2300: 5.75rem;
-  --size-2400: 6rem;
-  --size-2500: 6.25rem;
+
   --size-base-fontsize-copy-xxs: 0.625rem;
   --size-base-fontsize-copy-xs: 0.75rem;
   --size-base-fontsize-copy-sm: 0.875rem;
@@ -202,13 +181,6 @@ html:focus-within {
   --size-mobile-lineheight-headline-xl: 2rem;
   --size-mobile-lineheight-headline-xxl: 2.25rem;
 
-  --motion-base-delay-none: 0;
-  --motion-base-delay-shortest: 20ms;
-  --motion-base-delay-shorter: 50ms;
-  --motion-base-delay-short: 100ms;
-  --motion-base-delay-long: 200ms;
-  --motion-base-delay-longer: 400ms;
-  --motion-base-delay-longest: 600ms;
   --motion-base-ease-linear: cubic-bezier(0, 0, 1, 1);
   --motion-base-ease-in: cubic-bezier(1, 0.19, 0.99, 0.68);
   --motion-base-ease-out: cubic-bezier(0.19, 0.99, 0.68, 1);
@@ -323,67 +295,6 @@ html:focus-within {
   --clr-sidebar-background: 187 18% 10%;
 
   --clr-background-darker: hsl(240, 7%, 97%);
-}
-
-@media (min-width: 26.3125em) {
-  :root {
-    --fs-xl: 3.1rem;
-    --fs-l: 2.1rem;
-    --fs-m: 1.85rem;
-    --fs-s: 1.55rem;
-    --fs-xs: 1.25rem;
-    --fs-xxs: 1.1rem;
-  }
-}
-
-@media (min-width: 48.0625em) {
-  :root {
-    --h-spacing: 2.22em;
-    --v-spacing: 6em;
-    --container-spacing-v: 1.77em;
-    --container-spacing-h: 1.77em;
-    --container-spacing-v-l: 2.44em;
-    --container-spacing-h-l: 2.44em;
-
-    --fs-xl: 3.2rem;
-    --fs-l: 2.2rem;
-    --fs-m: 1.95rem;
-    --fs-s: 1.65rem;
-    --fs-xs: 1.35rem;
-    --fs-xxs: 1.2rem;
-    --fs-tiny: 0.87rem;
-  }
-}
-@media (min-width: 64.0625em) {
-  :root {
-    --h-spacing: 4.88rem;
-    --container-spacing-v: 2.22rem;
-    --container-spacing-h: 2.22rem;
-    --container-spacing-v-l: 3.55rem;
-    --container-spacing-h-l: 3.55rem;
-
-    --fs-xl: 3.3rem;
-    --fs-l: 2.3rem;
-    --fs-m: 2.05rem;
-    --fs-s: 1.75rem;
-    --fs-xs: 1.45rem;
-    --fs-xxs: 1.3rem;
-    --fs-tiny: 0.97rem;
-  }
-}
-
-@media (min-width: 80em) {
-  :root {
-    --fs-xl: 3.4rem;
-    --fs-l: 2.4rem;
-    --fs-m: 2.15rem;
-    --fs-s: 1.85rem;
-    --fs-xs: 1.55rem;
-    --fs-xxs: 1.4rem;
-    --fs-tiny: 1.07rem;
-    --fs-card-title: 1.22rem;
-    --fs-menu: 1rem;
-  }
 }
 
 /* Reset margins */

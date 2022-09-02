@@ -642,7 +642,7 @@
   z-index: 1000;
   width: 100%;
   max-width: 100%;
-  font-size: var(--fs-xs);
+  font-size: 1.15rem;
   font-family: var(--font-sans-fontfamily);
   transition: var(--transition-theme-modes),
     transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
