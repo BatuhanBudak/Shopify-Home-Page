@@ -1,12 +1,18 @@
 import { Dark, Sun, Close } from "../Icons";
 import useToggle from "../../hooks/useToggle";
 
+type Props = {
+  toggleThemeMode: () => void;
+  navOpen: boolean;
+  isTransitioning: boolean;
+  closeNav: () => void;
+};
 export default function NavDrawer({
   toggleThemeMode,
   navOpen,
   isTransitioning,
   closeNav,
-}) {
+}: Props) {
   const [secondAccordionOpen, toggleSecondAccordion] = useToggle();
 
   return (

@@ -1,6 +1,11 @@
 import { Hamburger } from "../Icons";
 
-export default function NavMobile({ navOpen, openNav }) {
+type Props = {
+  navOpen: boolean;
+  openNav: () => void;
+};
+
+export default function NavMobile({ navOpen, openNav }: Props) {
   return (
     <div className="marketing-nav--mobile-wrapper">
       <button

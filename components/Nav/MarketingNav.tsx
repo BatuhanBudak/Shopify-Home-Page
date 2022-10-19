@@ -2,19 +2,23 @@ import { useEffect, useRef, useState } from "react";
 import useToggle from "../../hooks/useToggle";
 import { ChevronDown, Magnify, Dark, Sun, BackSlash } from "../Icons";
 
-export default function MarketingNav({ toggleThemeMode }) {
+export default function MarketingNav({
+  toggleThemeMode,
+}: {
+  toggleThemeMode: () => void;
+}) {
   const [searchFormVisible, toggleSearchForm] = useToggle();
   const [accordionVisible, toggleAccordion] = useToggle();
   const [searchValue, setSearchValue] = useState("");
-  const inputRef = useRef();
-  const accordionRef = useRef();
-  const buttonRef = useRef();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const accordionRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setSearchValue(e.target.value);
   }
 
-  function handleModalClick(e) {
+  function handleModalClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     if (e.target === inputRef.current) {
       return;
     }
@@ -25,7 +29,7 @@ export default function MarketingNav({ toggleThemeMode }) {
     const accordionBtn = buttonRef.current;
     const accordion = accordionRef.current;
 
-    function handleDocumentClick(e) {
+    function handleDocumentClick(e: MouseEvent) {
       if (accordionBtn && accordion && accordionVisible) {
         if (e.target === accordion || e.target === accordionBtn) {
           return;

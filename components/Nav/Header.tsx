@@ -1,15 +1,16 @@
-import useScreenSize from "../../hooks/useScreenSize";
 import { useState } from "react";
 import useTransition from "../../hooks/useTransition";
 import NavDrawer from "./NavDrawer";
 import MarketingNav from "./MarketingNav";
 import NavMobile from "./NavMobile";
 
-export default function Header({ toggleThemeMode }) {
+export default function Header({
+  toggleThemeMode,
+}: {
+  toggleThemeMode: () => void;
+}) {
   const [navOpen, setNavOpen] = useState(false);
   const [isTransitioning, toggleTransition] = useTransition();
-  const windowWidth = useScreenSize();
-  const breakPoint = 1000;
 
   function openNav() {
     setNavOpen(true);
